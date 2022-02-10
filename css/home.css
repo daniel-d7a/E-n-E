@@ -99,6 +99,9 @@ button{
     display: none;
     flex-wrap: wrap;
     z-index: 99;
+    width: 100%;
+    background-color: white;
+    position: fixed;
 }
 
 .drop-down-menu a{
@@ -114,6 +117,9 @@ button{
     gap:0.5em;
     padding: 1.5em 0.5em;
     z-index: 99;
+    background-color: white;
+    position: fixed;
+    width: 100%;
 }
 
 #search-value{
