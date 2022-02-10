@@ -1,70 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>E n' E | Home</title>
-        <link rel="stylesheet" href="../css/all.min.css">
-        <link rel="stylesheet" href="../css/fontawesome.min.css">
-        <link rel="stylesheet" href="../css/home.css">
-    </head>
-    <body>
-        <nav>
-            <div class="logo">
-                <h2>E n' E</h2>
-            </div>
-            <div class="navigation">
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">Feedback</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="content1">
-            <h1>Sportive et élégante</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque enim officia ad suscipit, officiis explicabo error recusandae accusantium quae.</p>
-            <a href="">shop now</a>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>E n' E | Home</title>
+</head>
+<body>
+    <header>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
-        <div class="content2">
-            <div class="content2-top"><p>New products</p></div>
-            <div class="new">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content2-bottom"></div>
+        <div class="call-us">
+            <a href="tel:+201128336536">Call: +201128336536</a>
         </div>
-        <div class="content3">
-            <h2>24/7 Service</h2>
-            <div class="about">
-                <div>
-                    <!-- <i class="fa-solid fa-truck-fast"></i> -->
-                    <img src="../images/time.png" alt="">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, dolorum!</p>
-                </div>
-    
-                <div>
-                    <img src="../images/delivery.png" alt="">
-                    <!-- <i class="fa-solid fa-truck-fast"></i> -->
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, velit omnis.</p>
-                </div>
-    
-                <div>
-                    <!-- <i class="fa-solid fa-truck-fast"></i> -->
-                    <img src="../images/save-money.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus odio esse, provident quisquam quae.</p>
-                </div>
-    
-                <div>
-                    <!-- <i class="fa-solid fa-truck-fast"></i> -->
-                    <img src="../images/technical-support.png" alt="">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, dolore.</p>
-                </div>
+    </header>
+    <div class="navigation-bar">
+        <h1>E n' E</h1>
+        <button id="menu"><i class="fa-solid fa-bars"></i></button>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Feedback</a>
+        </div>
+        <div class="tools">
+            <button id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button id="user"><i class="fa-solid fa-user"></i></button>
+            <button id="cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+    </div>
+    <div id = "drop-down" class="drop-down-menu">
+        <a href="#">Home</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Feedback</a>
+    </div>
+    <div class="search" id = "search-box">
+        <input type="text" name="search" id="search-value" placeholder="Example: Nike">
+        <button id="search-for"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    <div class="user-container" id = "user-container-content">
+        <div class="login" id = "login-form">
+            <button id="close-login">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <form action="">
+                <Label>Log In</Label>
+                <input type="email" id = "login-email" placeholder="example@example.com">
+                <input type="password" id = "login-password" placeholder="Password">
+                <input type="submit" value="Log in">
+            </form>
+            <div class="other-login-actions">
+                <a href="#">Forgot Your Password?</a>
+                <button id = "create-acc">Create Account</button>
+            </div> 
+            
+        </div>
+        <div class="signup" id = "signup-form">
+            <button id="close-signup">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <form action="">
+                <Label>Sign Up</Label>
+                <input type="text" name="name" id="name" placeholder="Full Name">
+                <input type="email" id = "signup-email" placeholder="example@example.com">
+                <input type="password" id = "signup-password" placeholder="Password">
+                <input type="submit" value="Sign up">
+                
+            </form>
+            <div class="other-signup-actions">
+                <button id = "have-acc">Already have account? Log in.</button>
+            </div>   
+            
+        </div>
+    </div>
+    <div class="slider">
+        <button id="next-slide"><i class="fa-solid fa-angles-right"></i></button>
+        <button id="pre-slide"><i class="fa-solid fa-angles-left"></i></button>
+        <div class="ad" id = "advertisement">
+            <div style="background-image: url(../images/slider-1.jpg);" class="slide first-slide">
+                
+            </div>
+            <div style="background-image: url(../images/slider-2.jpg);" class="slide">
+                
+            </div>
+            <div style="background-image: url(../images/slider-3.jpg);" class="slide">
+                
+            </div>
+            <div style="background-image: url(../images/slider-4.jpg);" class="slide">
+                
             </div>
         </div>
-        
-    </body>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="../js/home.js"></script>
+</body>
 </html>

@@ -3,245 +3,357 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
-body{
-    scroll-behavior: smooth;
-}
-nav{
+
+
+header{
     width: 100%;
-    height: 10vh;
-    background-color: #e70022;
-    padding: 0 100px 0 50px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 1.5em 0;
+}
+
+header a{
+    text-decoration: none;
+}
+.social{
+    display: flex;
+    gap: 1em;
+}
+.social a{
+    color: rgb(75, 75, 75);
+}
+
+.call-us a{
+    color: rgb(126, 126, 126);
+}
+
+.navigation-bar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 100;
+    padding: 0 2em;
+
 }
-.logo{
-    width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+button{
+    cursor: pointer;
 }
-.logo h2{
-    font-size: 45px;
-    color: white;
+.navigation-bar button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(75, 75, 75);
 }
 
-.logo h2::first-letter{
-    color: #12a8e0;
+.navigation-bar h1{
+    font-size: 2.5em;
+    color: rgb(24, 24, 24);
 }
 
-.navigation{
-    width: 500px;
-    height: 100%;
-    
+.navigation-bar h1::first-letter{
+    color: rgb(0, 128, 100);
 }
-.navigation ul{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 20px;
-    list-style: none;
-    
+.navigation-bar i{
+    font-size: 1.5em;
 }
-.navigation ul li{
-    height: 100%;
-    
+.menu{
+    display: none;
+    gap: 1.5em;
+
 }
-.navigation li a{
-    height: 100%;
+.menu a{
     text-decoration: none;
+    color: rgb(75, 75, 75);
+    font-size: 1.2em;
+}
+.tools{
+    display: flex;
+    gap: 1em;
+}
+
+#cart{
+    position: relative;
+}
+
+#cart::after{
+    content: "0";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(0, 128, 100);
     color: white;
-    margin: 0;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    transition: 0.5s;
+    font-weight: bold;
+    top:-10px;
+    right: -10px;
 }
 
-.active::after{
-    content: "";
+.drop-down-menu{
+    display: none;
+    flex-wrap: wrap;
+    z-index: 99;
+}
+
+.drop-down-menu a{
     width: 100%;
-    height: 2px;
-    background-color: white;
-    position: absolute;
-    bottom: 1px;
-    left: 0;
-    transition: 0.5s;
-}
-
-
-.content1{
-    height: 75vh;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    background-color: #e9e9e9;
-    color: white;
-    padding: 100px;
-}
-.content1 h1{
-    font-size: 60px;
-    width:350px;
-    margin-bottom: 20px;
-}
-.content1 p{
-    font-size: 20px;
-    width: 500px;
-    margin-bottom: 50px;
-}
-
-.content1 a{
-    background-color: white;
-    color: #004fa2;
-    width: 200px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: bold;
+    padding: 1em 1em;
     text-decoration: none;
-    border-radius: 5px;
+    color: rgb(75, 75, 75);
+    border-bottom: 1px solid black;
 }
 
-.content1::before{
-    content: "";
-    width: 1500px;
-    height: 1500px;
-    background-color: #e8002b;
-    position: absolute;
-    top: -350px;
-    left: -700px;
-    z-index: -20;
-    transform: rotateZ(-115deg);
-    overflow: hidden;
+.search{
+    display: none;
+    gap:0.5em;
+    padding: 1.5em 0.5em;
+    z-index: 99;
 }
 
-.content1::after{
-    content: "";
-    width: 700px;
-    height: 500px;
-    background-image: url(../images/nike-background.png);
-    background-size: cover;
-    position: absolute;
-    top: 50px;
-    right: 250px;
+#search-value{
+    width: 85%;
+    height: 1.5em;
+    border: none;
+    outline: none;
+    padding: 1.5em 1em;
+    border-bottom: 1px solid  rgb(0, 128, 100);
+    color: rgb(32, 32, 32);
+    font-size: 1em;
+    font-weight: 700;
+
 }
-.content2{
-    background-color: #171827;
-    height: 60vh;
-    padding: 0px 50px;
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+
+#search-for{
+    color: rgb(75, 75, 75);
+    font-size: 1.2em;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+.user-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.514);
+    display: none;
     align-items: center;
     justify-content: center;
 }
 
-.content2-top{
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    position: relative;
-}
-
-.content2-top::before{
-    content: "";
-    width: 500px;
-    height: 2px;
-    background-color: #fff7f7;
-    position: absolute;
-    top: 50%;
-    left: -520px;
-}
-
-.content2-top::after{
-    content: "";
-    width: 500px;
-    height: 2px;
-    background-color: #ffffff;
-    position: absolute;
-    top: 50%;
-    right: -520px;
-}
-
-.content2-bottom{
-    width: 80%;
-    height: 3px;
-    background-color: #ffffff;
-    position: absolute;
-    bottom: 20px;
-}
-
-.new{
+.login, .signup{
     width: 90%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 20px 0;
-}
-.new div{
-    width: 200px;
-    height: 200px;
-    background-color: #cccccc;
+    max-width: 25em;
+    height: 22em;
+    background-color: white;
     border-radius: 10px;
     position: relative;
+    display: block;
+    
 }
 
-.new div::before{
-    content: "";
-    width: 80%;
-    height: 80%;
+.signup{
+    display: none;
+    height: 25em;
+}
+
+#close-login, #close-signup{
     position: absolute;
-    top: 10%;
-    left: 10%;
-    background-image: url(../images/nike-red-shoes.png);
-    background-size: cover;
+    right: 1em;
+    top: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: transparent;
+    color: rgb(75, 75, 75);
+    border: none;
+    outline: none;
 }
 
-.content3{
-    height: 75vh;
+#close-login i, #close-signup i{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.login form, .signup form{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: #a51890;
-    padding: 0 80px;
+    justify-content: center;
+    position: absolute;
+    top:4em;
+    gap: 0.5em;
 }
 
-.content3 h2{
-    color: white;
-    font-size: 50px;
-    width: 90%;
-    float: left;
-}
-
-.about{
+.login form label, .signup form label{
     width: 100%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: white;
-}
-.about div{
-    height: 100%;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
     text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color:rgb(75, 75, 75);
 }
 
-.about div img{
-    width: 80px;
-    height: 80px;
+.login form input, .signup form input{
+    width: 90%;
+    height: 3em;
+    padding: 0.2em;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(0, 128, 100);
+    font-size: 1em;
+}
+
+.login form input[type = "submit"],
+.signup form input[type = "submit"]{
+    background-color: rgb(0, 128, 100);
+    color: white;
+    border: none;
+    transition: 0.5s;
+}
+
+.login form input[type = "submit"]:hover,
+.login form input[type = "submit"]:hover{
+    background-color: rgb(5, 110, 87);
+    transition: 0.5s;
+}
+
+.other-login-actions,
+.other-signup-actions{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    position: absolute;
+    bottom: 2.5em;
+    left: 1.2em;
+
+}
+
+.other-login-actions a{
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+}
+
+.other-login-actions button,
+.other-signup-actions button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-decoration: underline;
+    color: rgb(75, 75, 75);
+    font-size: 1em;
+}
+
+.slider{
+    overflow: hidden;
+    position: relative;
+}
+.slider button{
+    position: absolute;
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.555);
+    font-size: 1.2em;
+    color: rgb(24, 24, 24);
+    z-index: 3;
+
+}
+
+#next-slide{
+    right: 10%;
+}
+
+#next-slide:visited{
+    margin-left: -100%;
+}
+
+#pre-slide{
+    left: 10%;
+}
+
+#pre-slide:visited + .ad{
+    margin-left: 100%;
+}
+
+.ad{
+    width: 500%;
+    display: flex;
+    overflow: hidden;
+    animation-name: slide;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+.ad div{
+    width:20%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@media (min-width: 650px) {
+    #menu{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .ad div{
+        height: 45vh;
+    }
+}
+
+@media (min-width: 900px) {
+    .ad div{
+        height: 65vh;
+    }
+    
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0%);
+    }
+    20%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(-20%);
+    }
+    45%{
+        transform: translateX(-20%);
+    }
+    50%{
+        transform: translateX(-40%);
+    }
+    70%{
+        transform: translateX(-40%);
+    }
+    75%{
+        transform: translateX(-60%);
+    }
+    95%{
+        transform: translateX(-60%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
