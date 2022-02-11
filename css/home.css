@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+body{
+    overflow-x: hidden;
+}
 
 header{
     width: 100%;
@@ -258,63 +260,350 @@ button{
     font-size: 1em;
 }
 
-.slider{
-    overflow: hidden;
+.slider-container{
+    width: 100%;
+    height: 25vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em;
+}
+
+.slider-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.slider-content h2{
+    font-size: 1.5em;
+    color: rgb(43, 43, 43);
+    display: flex;
+    flex-direction: column;
+}
+.slider-content h2 span{
+    color: rgb(0, 128, 100);
+    font-weight: bold;
+}
+
+.slider-content a{
+    text-decoration: none;
+    padding: 0.5em;
+    max-width: 7em;
+    font-size: 1.2em;
+    color: white;
+    background-color: rgb(0, 128, 100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brands, .recently-added{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    width: 100%;
+    padding: 1.5em;
+    align-items: center;
+    justify-content: center;
+}
+
+.brands h2{
+    color: rgb(43, 43, 43);
+    padding: 0.5em;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    border: 1px solid rgb(43, 43, 43);
+}
+
+.brands ul{
+    list-style: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+}
+
+
+.brands ul li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    gap: 0.5em;
+    text-decoration: none;
+    color: rgb(43, 43, 43);
+}
+
+
+
+
+
+.brands ul li a div{
+    width: 100%;
+    height: 10em;
+    border-radius: 10px;
+    padding: 1.5em;
+    transition: 0.5s;
+}
+
+.brands ul li a div img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.5s;
+}
+
+
+
+.recently-added h2{
+    background-color: rgb(43, 43, 43);
+    color: white;
+    padding: 0.5em;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    border: 1px solid white;
+    outline: 4px solid rgb(43, 43, 43);
+}
+
+.recently-added ul{
+    list-style: none;
+    /* display: grid;
+    grid-template-columns: repeat(1,1fr); */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+.recently-added ul li{
+    width: 18em;
+    height: 18em;
+    background-color: #dcfafb;
+    border-radius: 10px;
+    padding: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    
+}
+.img-container{
+    width: 100%;
+    padding: 0.5em;
     position: relative;
 }
-.slider button{
-    position: absolute;
-    top: calc(50% - 20px);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.info-container{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.info-container button{
+    font-size: 1.3em;
+    background-color: transparent;
     border: none;
     outline: none;
-    background-color: rgba(255, 255, 255, 0.555);
+    transition: 0.5s;
+
+}
+
+.like-product:hover{
+    color: rgb(192, 26, 26);
+    transition: 0.5s;
+
+}
+
+.info-container span{
     font-size: 1.2em;
-    color: rgb(24, 24, 24);
-    z-index: 3;
-
 }
 
-#next-slide{
-    right: 10%;
+.on-sale{
+    background-color: #ffe8df !important;
 }
 
-#next-slide:visited{
-    margin-left: -100%;
-}
-
-#pre-slide{
-    left: 10%;
-}
-
-#pre-slide:visited + .ad{
-    margin-left: 100%;
-}
-
-.ad{
-    width: 500%;
+.on-sale::after{
+    content: "30% off";
+    width: 6em;
+    height: 2em;
     display: flex;
-    overflow: hidden;
-    animation-name: slide;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
-}
-
-.ad div{
-    width:20%;
-    height: 20vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: 1em;
+    right: -0.5em;
+    z-index: 3;
 }
+.recently-added ul li::before{
+    content: "";
+}
+.recently-added ul li:hover::before{
+    content: "View";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 92, 92, 0.329);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius:10px ;
+    border-top-right-radius: 10px;
+    z-index: 2;
+    height: 70%;
+    font-size: 1.5em;
+    transition: 0.5s;
+
+}
+
+.summer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1em;
+    background-image: url(../images/—Pngtree—poly\ cost-effective\ discount\ offer\ clearance_976313.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 25vh;
+}
+
+.summer h2{
+    width: 70%;
+    font-size: 1.2em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.summer h2 a{
+    text-decoration: none;
+    color: #ff0076;
+    background-color: white;
+    width: fit-content;
+    padding: 0.5em;
+    font-size: 0.8em;
+}
+.summer-img{
+    width: 10em;
+    height: 10em;
+}
+.summer-img img{
+    animation-name: hello-summer;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.contact-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2em;
+    position: relative;
+    padding: 2em 0;
+}
+.contact-us::before{
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: rgb(32, 32, 32);
+    position: absolute;
+    top: 0;
+}
+.contact-us div{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    width: 80%;
+}
+.contact-us textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(0, 128, 100);
+    border-left: 2px solid rgb(0, 128, 100);
+    padding: 0.5em;
+    font-size: 1.2em;
+    color: rgb(43, 43, 43);
+}
+
+.contact-us button{
+    background-color: rgb(0, 128, 100);
+    color: white;
+    font-size: 1.2em;
+    max-width: 15em;
+    width:80%;
+    height: 2em;
+    border: none;
+    outline: none;
+}
+.contact-us h2{
+    color: rgb(43, 43, 43);
+}
+
+.about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 128, 100);
+    color: white;
+    padding: 2em 0;
+    gap: 1em;
+}
+.about-us p{
+    text-align: center;
+    width: 80%;
+    max-width: 25em;
+}
+
+.about-us div{
+    width: 30%;
+    max-width: 12em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-us div a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(3, 92, 73);
+    color: white;
+    font-size: 1em;
+    padding: 1em 2.5em;
+}
+footer span{
+    font-weight: bold;
+}
+
 @media (min-width: 650px) {
     #menu{
         display: none;
@@ -322,44 +611,73 @@ button{
     .menu{
         display: flex;
     }
-    .ad div{
-        height: 45vh;
+    .slider-content a{
+        max-width: 10em;
+    }
+    .slider-container{
+        padding: 8em 5em;
+        height: 65vh;
+    }
+
+    .slider-content h2{
+        font-size: 5em;
+    }
+
+    .brands ul{
+        list-style: none;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1em;
+    }
+
+    .brands ul li a div{
+        height: 15em;
+        padding: 2em;
+    }
+
+    .brands ul li a:hover div{
+        padding: 1.8em;
+        transition: 0.5s;
+    }
+
+    .brands ul li a:hover div img{
+        transform: rotateZ(-15deg);
+        transition: 0.5s;
+    }
+
+    .summer{
+        height: 55vh;
+        padding: 0 2em;
+    }
+    .summer h2{
+        font-size: 2em;
+    }
+    .summer-img{
+        width: 20em;
+        height: 20em;
+    }
+
+    .contact-us div{
+        align-items: flex-start;
     }
 }
 
 @media (min-width: 900px) {
-    .ad div{
-        height: 65vh;
-    }
     
 }
 
-@keyframes slide{
+@keyframes hello-summer{
     0%{
-        transform: translateX(0%);
-    }
-    20%{
-        transform: translateX(0%);
-    }
-    25%{
-        transform: translateX(-20%);
-    }
-    45%{
-        transform: translateX(-20%);
+        transform: rotateZ(15deg);
     }
     50%{
-        transform: translateX(-40%);
-    }
-    70%{
-        transform: translateX(-40%);
-    }
-    75%{
-        transform: translateX(-60%);
-    }
-    95%{
-        transform: translateX(-60%);
+        transform: rotateZ(-15deg);
     }
     100%{
-        transform: translateX(0%);
+        transform: rotateZ(15deg);
     }
 }
+
+

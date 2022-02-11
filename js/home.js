@@ -38,14 +38,18 @@ searchBtn.onclick = function(){
 
 userBtn.onclick = function(){
     userForm.style.display = 'flex';
+    // document.body.style.overflowY = 'hidden';
+    window.scrollTo(0,0);
 }
 
 closeLoginBtn.onclick = function(){
     userForm.style.display = 'none';
+    document.body.style.overflowY = 'scroll';
 }
 
 closeSignupBtn.onclick = function(){
     userForm.style.display = 'none';
+    document.body.style.overflowY = 'scroll';
 }
 
 createAcc.onclick = function(){
@@ -58,14 +62,12 @@ haveAcc.onclick = function(){
     signupForm.style.display = 'none'
 }
 
-// nextSlide.onclick = function(){
-//     ads.style.animationName = `s`;
-//     ads.style.marginLeft += `-100%`
-// }
-// preSlide.onclick = function(){
-//     ads.style.animationName = `s`;
-//     ads.style.marginLeft += `100%`
-// }
+document.onscroll = function(){
+    menuList.style.display = 'none';
+    searchBox.style.display = 'none';
+    menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+}
+
 
 
 
