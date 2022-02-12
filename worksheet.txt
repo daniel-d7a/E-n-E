@@ -4,11 +4,13 @@ progress -->
         - changed layout template
         - finished nav bar and almost slider
     Eyad:
+        - // no work //
 new skills learnt -->
     Ehab:
         - how to make slider
         - digged more in responsive designs
     Eyad:
+        - // no work //
     
     
  ----------------------------------------------------------------------
@@ -18,11 +20,14 @@ progress -->
     
     
     Eyad:
+        - // no work //
+    
 new skills learnt -->
     Ehab:
     
     
     Eyad:
+        - // no work //
     
     
  ----------------------------------------------------------------------
@@ -32,12 +37,14 @@ progress -->
     
     
     Eyad:
+        - finished initial feedback page design
+        
 new skills learnt -->
     Ehab:
     
     
     Eyad:
-    
+        - how to change remote repo ( git )
     
  ----------------------------------------------------------------------
  Day 4:
