@@ -1,0 +1,123 @@
+:root{
+  --picture-size: 200px;
+  --text-margin: 15px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: grid;
+  grid-template-rows: 10vh repeat(3, 1fr) 10vh;
+  row-gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.main{
+  margin: 0 12vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  /* padding: 15px; */
+  box-shadow: 3px 3px 15px 3px #eee;
+  border-radius: 10px;
+}
+
+.container1{
+  grid-row: 2 / span 1;
+}
+.container2{
+  grid-row: 3 / span 1;
+}
+.container3{
+  grid-row: 4 / span 1;
+}
+
+.inner-container{
+  margin-left: var(--text-margin);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container2 .inner-container{
+  order: -1;
+  margin-left: 0;
+  margin-right: var(--text-margin);
+}
+
+img{
+  width: var(--picture-size);
+  height: var(--picture-size);
+  object-fit: cover;
+  /* border-radius: 20px; */
+  filter: saturate(0.75);
+}
+
+p{
+  font-family: 'Poppins', sans-serif;
+  margin-left: var(--text-margin);
+  text-align: start;
+}
+
+p.customer{
+  font-size: 12px;
+  margin-top: 15px;
+  margin-right: 20px;
+  text-align: end;
+}
+
+nav, footer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  height: 10vh;
+}
+
+nav{
+  grid-row: 1 / span 1;
+}
+footer{
+  grid-row: 5 / span 1;
+}
+
+.container1 .image{
+  padding: 15px;
+  background-color: #e44a83;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.container2 .image{
+  padding: 15px;
+  background-color: #148572;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
+.container3 .image{
+  padding: 15px;
+  background-color: #f2d055;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .container1 img, .container3 img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .container2 img{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
